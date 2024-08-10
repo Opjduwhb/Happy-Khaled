@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【﻿Ｓａｅｅｄ　Ｃｏｍｐａｎｙ】</title>
+    <title>Mr. Mobile</title>
     <style>
         body {
-            background-color: #001f3f;
+            background-color: #003366;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -18,13 +18,17 @@
             align-items: center;
             padding: 20px;
             background-color: #002b5e;
+            border-bottom: 3px solid #ff6600;
         }
         .site-header .site-name {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
         }
         .site-header .site-name img {
-            width: 40px;
+            width: 50px;
             vertical-align: middle;
             margin-left: 10px;
         }
@@ -33,51 +37,37 @@
             margin: 100px auto;
             padding: 20px;
             max-width: 80%;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;ج
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
         }
         .welcome-message h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 32px;
         }
         .welcome-message p {
             margin-top: 10px;
-            font-size: 18px;
+            font-size: 20px;
         }
         .welcome-message a {
             display: inline-block;
             margin-top: 20px;
-            padding: 12px 24px;
+            padding: 15px 30px;
             background-color: #ff6600;
             color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            font-size: 22px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .welcome-message a:hover {
             background-color: #e55b00;
-        }
-        img.moving-image {
-            position: absolute;
-            bottom: 0px;
-            right: 1px;
-            max-width: 200px;
-            animation: moveImage 1s ease-out forwards;
-        }
-        @keyframes moveImage {
-            0% {
-                transform: translateY(100%);
-            }
-            100% {
-                transform: translateY(0);
-            }
+            transform: scale(1.05);
         }
         .content {
             display: none;
             text-align: center;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             max-width: 90%;
             margin: 20px auto;
@@ -87,51 +77,53 @@
             color: #000;
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .offers h2 {
             margin-top: 0;
-            font-size: 24px;
+            font-size: 28px;
         }
         .offer-item {
-            background-color: #f9f9f9;
+            background-color: #f5f5f5;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 9px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .offer-item h3 {
             margin: 0;
-            font-size: 20px;
+            font-size: 24px;
         }
         .offer-item p {
-            font-size: 10px;
+            font-size: 20px;
             margin: 10px 0;
         }
         .offer-item img {
             max-width: 100%;
-            border-radius: 5px;
+            border-radius: 8px;
         }
         .back-button {
             display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 15px 30px;
             background-color: #ff6600;
             color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            font-size: 22px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .back-button:hover {
             background-color: #e55b00;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <header class="site-header">
         <div class="site-name">
-             { Saeed Company }
+            Mr. Mobile
             <img src="https://i.postimg.cc/kghbbsDp/1000011156.gif" alt="شعار">
         </div>
     </header>
@@ -142,7 +134,6 @@
         <p>اضغط هنا عشان تشوف أنسب العروض المتاحة بأقل الأسعار</p>
         <a href="#" onclick="showOffers()">اضغط هنا</a>
     </div>
-    <img class="moving-image" src="https://i.postimg.cc/5tWjWRrL/1000012168-removebg-preview.png" alt="صورة متحركة">
 
     <!-- محتوى العروض -->
     <div class="content" id="offersContent">
@@ -180,13 +171,11 @@
     <script>
         function showOffers() {
             document.querySelector('.welcome-message').style.display = 'none';
-            document.querySelector('.moving-image').style.display = 'none';
             document.querySelector('#offersContent').style.display = 'block';
         }
 
         function showHome() {
             document.querySelector('.welcome-message').style.display = 'block';
-            document.querySelector('.moving-image').style.display = 'block';
             document.querySelector('#offersContent').style.display = 'none';
         }
     </script>
