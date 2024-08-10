@@ -3,81 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مرحبا بكم في موقعنا</title>
+    <title>【﻿Ｓａｅｅｄ　Ｃｏｍｐａｎｙ】</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #001f3f;
             margin: 0;
             padding: 0;
-            background: url('https://i.imgur.com/XfDpUGI.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
         }
-        .container {
-            margin-top: 100px;
-            background: rgba(0, 0, 0, 0.6);
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            border-radius: 8px;
+            background-color: #002b5e;
+        }
+        .site-header .site-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .site-header .site-name img {
+            width: 40px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        .welcome-message {
+            text-align: center;
+            margin: 100px auto;
+            padding: 20px;
+            max-width: 80%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;ج
+        }
+        .welcome-message h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .welcome-message p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .welcome-message a {
             display: inline-block;
-            max-width: 400px;
-            width: 100%;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
         }
-        h1 {
-            margin-bottom: 20px;
+        .welcome-message a:hover {
+            background-color: #e55b00;
         }
-        form {
-            margin: 20px 0;
+        img.moving-image {
+            position: absolute;
+            bottom: 0px;
+            right: 1px;
+            max-width: 200px;
+            animation: moveImage 1s ease-out forwards;
         }
-        input[type="text"],
-        input[type="password"] {
-            padding: 12px;
+        @keyframes moveImage {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .content {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            max-width: 90%;
+            margin: 20px auto;
+        }
+        .offers {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .offers h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .offer-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 9px rgba(0,0,0,0.1);
+        }
+        .offer-item h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .offer-item p {
+            font-size: 10px;
             margin: 10px 0;
-            border: none;
+        }
+        .offer-item img {
+            max-width: 100%;
             border-radius: 5px;
-            width: calc(100% - 24px); /* Adjusted for padding */
-            box-sizing: border-box;
         }
-        button {
-            padding: 12px;
-            border: none;
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
             border-radius: 5px;
-            background-color: #4CAF50;
-            color: #fff;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
         }
-        button:hover {
-            background-color: #45a049;
-        }
-        .whatsapp-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            animation: pulse 1.5s infinite;
-            z-index: 1000;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        .back-button:hover {
+            background-color: #e55b00;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>مرحبا بكم في موقعنا</h1>
-        <form>
-            <input type="text" placeholder="اسم المستخدم" required>
-            <input type="password" placeholder="كلمة المرور" required>
-            <button type="submit">تسجيل الدخول</button>
-        </form>
+    <header class="site-header">
+        <div class="site-name">
+             { Saeed Company }
+            <img src="https://i.postimg.cc/kghbbsDp/1000011156.gif" alt="شعار">
+        </div>
+    </header>
+
+    <!-- الصفحة الرئيسية -->
+    <div class="welcome-message">
+        <h1>مرحباً بكم في عروض سعيد بتاع الغلابة للموبايلات والهواتف الذكية</h1>
+        <p>اضغط هنا عشان تشوف أنسب العروض المتاحة بأقل الأسعار</p>
+        <a href="#" onclick="showOffers()">اضغط هنا</a>
     </div>
-    <a href="https://wa.me/01050079125" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp_icon.png" alt="WhatsApp" class="whatsapp-icon">
-    </a>
+    <img class="moving-image" src="https://i.postimg.cc/5tWjWRrL/1000012168-removebg-preview.png" alt="صورة متحركة">
+
+    <!-- محتوى العروض -->
+    <div class="content" id="offersContent">
+        <div class="offers">
+            <h2>عروض موبايلات سامسونج</h2>
+            <div class="offer-item">
+                <h3>سامسونج جالاكسي S23</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSObsw3K5x316Ax2rRLRk4AJBZC53skFXeBhQ&usqp=CAU" alt="سامسونج جالاكسي S23">
+                <p>أفضل عروض على سامسونج جالاكسي S23 الآن.</p>
+                <p><strong>السعر: 15,000 جنيه</strong></p>
+            </div>
+            <div class="offer-item">
+                <h3>سامسونج جالاكسي A54</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpIznvonstP-KAdgImgs9sIQryFmY_LDKzRg&usqp=CAU" alt="سامسونج جالاكسي A54">
+                <p>خصومات رائعة على سامسونج جالاكسي A54.</p>
+                <p><strong>السعر: 9,000 جنيه</strong></p>
+            </div>
+            <h2>عروض ريلمي C51 و C53</h2>
+            <div class="offer-item">
+                <h3>ريلمي C51</h3>
+                <img src="https://m.media-amazon.com/images/I/61PRiq9ULeL.jpg" alt="ريلمي C51">
+                <p>عروض مميزة على ريلمي C51.</p>
+                <p><strong>السعر: 4,500 جنيه</strong></p>
+            </div>
+            <div class="offer-item">
+                <h3>ريلمي C53</h3>
+                <img src="https://mobizil.com/wp-content/uploads/2023/06/Realme-C53.jpg" alt="ريلمي C53">
+                <p>أفضل الأسعار على ريلمي C53.</p>
+                <p><strong>السعر: 5,500 جنيه</strong></p>
+            </div>
+            <a href="#" class="back-button" onclick="showHome()">العودة إلى الصفحة الرئيسية</a>
+        </div>
+    </div>
+
+    <script>
+        function showOffers() {
+            document.querySelector('.welcome-message').style.display = 'none';
+            document.querySelector('.moving-image').style.display = 'none';
+            document.querySelector('#offersContent').style.display = 'block';
+        }
+
+        function showHome() {
+            document.querySelector('.welcome-message').style.display = 'block';
+            document.querySelector('.moving-image').style.display = 'block';
+            document.querySelector('#offersContent').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
