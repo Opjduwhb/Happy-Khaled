@@ -3,306 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Mobile</title>
+    <title>تم اختراق الموقع</title>
     <style>
         body {
-            background-color: #003366;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-        }
-        .site-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #002b5e;
-            border-bottom: 3apx solid #ff6600;
-        }
-        .site-header .site-name {
-            font-size: 28px;
-            font-weight: bold;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-        }
-        .site-header .site-name img {
-            width: 90px;
-            vertical-align: middle;
-            margin-left: 10px;
-        }
-        .welcome-message {
-            text-align: center;
-            margin: 100px auto;
-            padding: 20px;
-            max-width: 80%;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-        }
-        .welcome-message h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        .welcome-message p {
-            margin-top: 10px;
-            font-size: 20px;
-        }
-        .welcome-message a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #ff6600;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 22px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .welcome-message a:hover {
-            background-color: #e55b00;
-            transform: scale(1.05);
-        }
-        .content {
-            display: none;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #0f0;
             text-align: center;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            max-width: 90%;
-            margin: 20px auto;
-        }
-        .offers {
-            background-color: #ffffff;
-            color: #000;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .offers h2 {
-            margin-top: 0;
-            font-size: 28px;
-        }
-        .offer-item {
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .offer-item h3 {
             margin: 0;
-            font-size: 24px;
-        }
-        .offer-item p {
-            font-size: 20px;
-            margin: 10px 0;
-        }
-        .offer-item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .offer-item .info-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #ff6600;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .offer-item .info-button:hover {
-            background-color: #e55b00;
-            transform: scale(1.05);
-        }
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #ff6600;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 22px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .back-button:hover {
-            background-color: #e55b00;
-            transform: scale(1.05);
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            height: 100vh;
+            display: flex;
             justify-content: center;
             align-items: center;
         }
-        .modal-content {
-            background-color: #ffffff;
-            color: #000;
-            padding: 20px;
+        .container {
+            background-color: #111;
+            border: 2px solid #f00;
             border-radius: 10px;
-            max-width: 80%;
-            margin: 20px;
-        }
-        .modal-content h3 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .modal-content p {
-            font-size: 18px;
-        }
-        .modal-content .close {
+            padding: 20px;
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ff6600;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 0 10px #f00;
         }
-        .modal-content .close:hover {
-            background-color: #e55b00;
-            transform: scale(1.05);
+        h1 {
+            color: #f00;
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #0f0;
+            background-color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="site-name">
-            Mr. Mobile
-            <img src="https://i.postimg.cc/kghbbsDp/1000011156.gif" alt="شعار">
-        </div>
-    </header>
-
-    <!-- الصفحة الرئيسية -->
-    <div class="welcome-message">
-        <h1>مرحباً بكم في عروض سعيد بتاع الغلابة للموبايلات والهواتف الذكية</h1>
-        <p>اضغط هنا عشان تشوف أنسب العروض المتاحة بأقل الأسعار</p>
-        <a href="#" onclick="showOffers()">اضغط هنا</a>
+    <div class="container">
+        <h1>تم اختراق الموقع!</h1>
+        <p>تم الوصول إلى بياناتك!</p>
+        <p>إذا كنت مسؤول الموقع، اتصل بالجهات المختصة فورًا!</p>
+        <p class="code">كود التهكير: 0xDEADBEEF</p>
     </div>
-
-    <!-- محتوى العروض -->
-    <div class="content" id="offersContent">
-        <div class="offers">
-            <h2>عروض موبايلات سامسونج</h2>
-            <div class="offer-item">
-                <h3>سامسونج جالاكسي S23</h3>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSObsw3K5x316Ax2rRLRk4AJBZC53skFXeBhQ&usqp=CAU" alt="سامسونج جالاكسي S23">
-                <p>أفضل عروض على سامسونج جالاكسي S23 الآن.</p>
-                <p><strong>السعر: 15,000 جنيه</strong></p>
-                <a href="#" class="info-button" onclick="showInfo('s23')">مزيد من المعلومات</a>
-            </div>
-            <div class="offer-item">
-                <h3>سامسونج جالاكسي A54</h3>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpIznvonstP-KAdgImgs9sIQryFmY_LDKzRg&usqp=CAU" alt="سامسونج جالاكسي A54">
-                <p>خصومات رائعة على سامسونج جالاكسي A54.</p>
-                <p><strong>السعر: 9,000 جنيه</strong></p>
-                <a href="#" class="info-button" onclick="showInfo('a54')">مزيد من المعلومات</a>
-            </div>
-            <h2>عروض ريلمي C51 و C53</h2>
-            <div class="offer-item">
-                <h3>ريلمي C51</h3>
-                <img src="https://m.media-amazon.com/images/I/61PRiq9ULeL.jpg" alt="ريلمي C51">
-                <p>عروض مميزة على ريلمي C51.</p>
-                <p><strong>السعر: 4,500 جنيه</strong></p>
-                <a href="#" class="info-button" onclick="showInfo('c51')">مزيد من المعلومات</a>
-            </div>
-            <div class="offer-item">
-                <h3>ريلمي C53</h3>
-                <img src="https://mobizil.com/wp-content/uploads/2023/06/Realme-C53.jpg" alt="ريلمي C53">
-                <p>أفضل الأسعار على ريلمي C53.</p>
-                <p><strong>السعر: 5,500 جنيه</strong></p>
-                <a href="#" class="info-button" onclick="showInfo('c53')">مزيد من المعلومات</a>
-            </div>
-            <a href="#" class="back-button" onclick="showHome()">العودة إلى الصفحة الرئيسية</a>
-        </div>
-    </div>
-
-    <!-- نوافذ منبثقة للمعلومات -->
-    <div id="s23Info" class="modal">
-        <div class="modal-content">
-            <h3>معلومات عن سامسونج جالاكسي S23</h3>
-            <p>الشاشة: 6.1 بوصة Dynamic AMOLED 2X</p>
-            <p>المعالج: Exynos 2200</p>
-            <p>الذاكرة: 8 جيجابايت RAM / 128 جيجابايت تخزين</p>
-            <p>الكاميرا: 50 ميجابكسل + 12 ميجابكسل + 10 ميجابكسل</p>
-            <p>البطارية: 3900 مللي أمبير</p>
-            <a href="#" class="close" onclick="closeInfo('s23Info')">إغلاق</a>
-        </div>
-    </div>
-
-    <div id="a54Info" class="modal">
-        <div class="modal-content">
-            <h3>معلومات عن سامسونج جالاكسي A54</h3>
-            <p>الشاشة: 6.4 بوصة Super AMOLED</p>
-            <p>المعالج: Exynos 1380</p>
-            <p>الذاكرة: 6 جيجابايت RAM / 128 جيجابايت تخزين</p>
-            <p>الكاميرا: 50 ميجابكسل + 12 ميجابكسل + 5 ميجابكسل</p>
-            <p>البطارية: 5000 مللي أمبير</p>
-            <a href="#" class="close" onclick="closeInfo('a54Info')">إغلاق</a>
-        </div>
-    </div>
-
-    <div id="c51Info" class="modal">
-        <div class="modal-content">
-            <h3>معلومات عن ريلمي C51</h3>
-            <p>الشاشة: 6.5 بوصة IPS LCD</p>
-            <p>المعالج: Unisoc T612</p>
-            <p>الذاكرة: 4 جيجابايت RAM / 64 جيجابايت تخزين</p>
-            <p>الكاميرا: 50 ميجابكسل + 2 ميجابكسل</p>
-            <p>البطارية: 5000 مللي أمبير</p>
-            <a href="#" class="close" onclick="closeInfo('c51Info')">إغلاق</a>
-        </div>
-    </div>
-
-    <div id="c53Info" class="modal">
-        <div class="modal-content">
-            <h3>معلومات عن ريلمي C53</h3>
-            <p>الشاشة: 6.74 بوصة IPS LCD</p>
-            <p>المعالج: Unisoc T612</p>
-            <p>الذاكرة: 6 جيجابايت RAM / 128 جيجابايت تخزين</p>
-            <p>الكاميرا: 108 ميجابكسل + 2 ميجابكسل</p>
-            <p>البطارية: 5000 مللي أمبير</p>
-            <a href="#" class="close" onclick="closeInfo('c53Info')">إغلاق</a>
-        </div>
-    </div>
-
-    <script>
-        function showOffers() {
-            document.querySelector('.welcome-message').style.display = 'none';
-            document.querySelector('#offersContent').style.display = 'block';
-        }
-
-        function showHome() {
-            document.querySelector('.welcome-message').style.display = 'block';
-            document.querySelector('#offersContent').style.display = 'none';
-        }
-
-        function showInfo(id) {
-            document.getElementById(id + 'Info').style.display = 'flex';
-        }
-
-        function closeInfo(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-    </script>
 </body>
 </html>
-<!-- أيقونة واتساب -->
-<a href="https://wa.me/+201029836499" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: center; max-width: 300px; white-space: nowrap;" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 8px;">
-    <span>إذا أردت شراء المنتج يمكنك التواصل معنا </span>
-</a>
-
-
-
