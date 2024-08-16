@@ -3,26 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع تحت الصيانة</title>
+    <title>التحقق من الاختراق</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 50px;
+            margin-top: 50px;
         }
-        h1 {
-            color: #e74c3c;
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
         }
-        p {
-            font-size: 18px;
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <h1>الموقع تحت الصيانة</h1>
-    <p>عزيزي الزائر، نعتذر عن الإزعاج، الموقع في حالة صيانة حالياً. سنعود قريباً.</p>
-    <p>شكراً لتفهمك!</p>
+    <h1>ادخل رقم التعريف لاظهار الاختراق الآن</h1>
+    <input type="text" id="idInput" placeholder="رقم التعريف">
+    <button onclick="showInfo()">إظهار</button>
+    <div id="result" class="hidden" style="margin-top: 20px;">
+        <p>اسم الشخص: أحمد محمود أديب</p>
+        <p>من الإسكندرية</p>
+    </div>
+    <div id="message" style="margin-top: 20px;"></div>
+
+    <script>
+        function showInfo() {
+            var id = document.getElementById('idInput').value;
+            var resultDiv = document.getElementById('result');
+            var messageDiv = document.getElementById('message');
+            
+            if (id === '4420') {
+                messageDiv.innerHTML = '<p>يتم الآن معالجة الطلب، يرجى الانتظار 30 ثانية...</p>';
+                setTimeout(function() {
+                    resultDiv.classList.remove('hidden');
+                    messageDiv.innerHTML = '';
+                }, 30000); // 30 ثانية = 30000 مللي ثانية
+            } else {
+                messageDiv.innerHTML = '<p>رقم التعريف غير صحيح، يرجى إدخال الرقم الصحيح.</p>';
+                resultDiv.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
