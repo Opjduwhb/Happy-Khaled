@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>استثمار في العلف</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -89,22 +90,44 @@
             margin: 0;
             font-size: 0.9rem;
         }
-        .whatsapp-button {
+        .contact-buttons {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-button {
             background-color: #25D366;
             color: white;
             border: none;
-            padding: 15px;
-            border-radius: 50%;
+            padding: 10px 15px;
+            border-radius: 50px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
-        .whatsapp-button:hover {
+        .contact-button i {
+            margin-right: 8px;
+            font-size: 1rem; /* تصغير حجم الأيقونة */
+        }
+        .contact-button span {
+            font-size: 0.9rem; /* تصغير حجم النص */
+        }
+        .contact-button:hover {
             background-color: #128C7E;
+        }
+        .contact-button.customer-service {
+            background-color: #34b7f1;
+        }
+        .contact-button.customer-service:hover {
+            background-color: #0095ff;
         }
         .testimonial-bar {
             position: fixed;
@@ -164,7 +187,16 @@
         <p>© 2024 شركة الاستثمار في العلف - جميع الحقوق محفوظة</p>
     </footer>
 
-    <a href="https://wa.me/+201050887932?text=إدارة%20أعمال" class="whatsapp-button" target="_blank">واتساب</a>
+    <div class="contact-buttons">
+        <a href="https://api.whatsapp.com/send?phone=+201050887932&text=إدارة%20أعمال" class="contact-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="mailto:support@example.com" class="contact-button customer-service">
+            <i class="fas fa-headset"></i>
+            <span>خدمة العملاء</span>
+        </a>
+    </div>
 
     <div class="testimonial-bar" id="testimonial-bar">
         <p id="testimonial-text">لقد ربحت 5000 جنيه من استثماري هنا! تجربة رائعة.</p>
