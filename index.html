@@ -3,55 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التحقق من الاختراق</title>
+    <title>استثمار في العلف</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
             text-align: center;
-            margin-top: 50px;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
-        input {
-            padding: 10px;
-            margin: 10px;
-            font-size: 16px;
+        header {
+            background-color: #27ae60;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        button {
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .investment-plan {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            max-width: 300px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .investment-plan:hover {
+            transform: scale(1.05);
+        }
+        .investment-plan h2 {
+            color: #27ae60;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .investment-plan p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .investment-plan .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #e74c3c;
+        }
+        .investment-plan button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 1rem;
             cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        .hidden {
-            display: none;
+        .investment-plan button:hover {
+            background-color: #219150;
+        }
+        .investment-plan img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+        .testimonial-bar {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) translateX(100%);
+            width: 300px;
+            background-color: #fff;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease-in-out;
+            padding: 10px;
+            text-align: center;
+        }
+        .testimonial-bar.show {
+            transform: translateY(-50%) translateX(0);
+        }
+        .testimonial-bar p {
+            margin: 0;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
-    <h1>ادخل رقم التعريف لاظهار الاختراق الآن</h1>
-    <input type="text" id="idInput" placeholder="رقم التعريف">
-    <button onclick="showInfo()">إظهار</button>
-    <div id="result" class="hidden" style="margin-top: 20px;">
-        <p>اسم الشخص: أحمد محمود أديب</p>
-        <p>من الإسكندرية</p>
+
+    <header>
+        <h1>استثمار في العلف</h1>
+        <p>استثمر بحكمة واحصل على عوائد كبيرة في وقت قصير</p>
+    </header>
+
+    <div class="container">
+        <div class="investment-plan">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQibjaixhaULIR9b7q5cJNiFbVUsELTnPCHEg&usqp=CAU" alt="علف">
+            <h2>الخطة الأولى</h2>
+            <p>استثمر 500 جنيه لتحصل على 1000 جنيه في غضون شهر.</p>
+            <p class="price">500 جنيه</p>
+            <button>استثمر الآن</button>
+        </div>
+
+        <div class="investment-plan">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQibjaixhaULIR9b7q5cJNiFbVUsELTnPCHEg&usqp=CAU" alt="علف">
+            <h2>الخطة الثانية</h2>
+            <p>استثمر 1000 جنيه لتحصل على 2500 جنيه في غضون شهرين.</p>
+            <p class="price">1000 جنيه</p>
+            <button>استثمر الآن</button>
+        </div>
+
+        <div class="investment-plan">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQibjaixhaULIR9b7q5cJNiFbVUsELTnPCHEg&usqp=CAU" alt="علف">
+            <h2>الخطة الثالثة</h2>
+            <p>استثمر 2000 جنيه لتحصل على 5000 جنيه في غضون ثلاثة أشهر.</p>
+            <p class="price">2000 جنيه</p>
+            <button>استثمر الآن</button>
+        </div>
     </div>
-    <div id="message" style="margin-top: 20px;"></div>
+
+    <footer>
+        <p>© 2024 شركة الاستثمار في العلف - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <a href="https://wa.me/01050887938?text=إدارة%20أعمال" class="whatsapp-button" target="_blank">واتساب</a>
+
+    <div class="testimonial-bar" id="testimonial-bar">
+        <p id="testimonial-text">لقد ربحت 5000 جنيه من استثماري هنا! تجربة رائعة.</p>
+    </div>
 
     <script>
-        function showInfo() {
-            var id = document.getElementById('idInput').value;
-            var resultDiv = document.getElementById('result');
-            var messageDiv = document.getElementById('message');
-            
-            if (id === '4420') {
-                messageDiv.innerHTML = '<p>يتم الآن معالجة الطلب، يرجى الانتظار 30 ثانية...</p>';
-                setTimeout(function() {
-                    resultDiv.classList.remove('hidden');
-                    messageDiv.innerHTML = '';
-                }, 30000); // 30 ثانية = 30000 مللي ثانية
-            } else {
-                messageDiv.innerHTML = '<p>رقم التعريف غير صحيح، يرجى إدخال الرقم الصحيح.</p>';
-                resultDiv.classList.add('hidden');
-            }
+        let testimonials = [
+            "لقد ربحت 5000 جنيه من استثماري هنا! تجربة رائعة.",
+            "استثمرت 1000 جنيه وحقق 2000 جنيه في شهرين، أنصح الجميع.",
+            "حصلت على عوائد مدهشة من استثماري بقيمة 2000 جنيه.",
+            "خطة ممتازة، استثمرت 500 جنيه وحققت 1000 جنيه في وقت قصير."
+        ];
+        let testimonialIndex = 0;
+        let testimonialBar = document.getElementById('testimonial-bar');
+
+        function changeTestimonial() {
+            testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+            document.getElementById('testimonial-text').innerText = testimonials[testimonialIndex];
         }
+
+        function showTestimonialBar() {
+            testimonialBar.classList.add('show');
+            setTimeout(() => {
+                testimonialBar.classList.remove('show');
+            }, 5000); // Hide after 5 seconds
+        }
+
+        setInterval(() => {
+            showTestimonialBar();
+            changeTestimonial();
+        }, 10000); // Show every 10 seconds
     </script>
+
 </body>
 </html>
